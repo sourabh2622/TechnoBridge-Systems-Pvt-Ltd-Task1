@@ -25,6 +25,14 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Consegic Business Intelligence">
 
+    <meta property="og:title" content="Consegic Business Intelligence">
+    <meta property="og:description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum deserunt ipsam et
+    mollitia pariatur! Tempore asperiores in, accusantium totam esse dolorum
+    deserunt vel laudantium,">
+    <meta property="og:image"
+        content="https://sourabh2622.github.io/TechnoBridge-Systems-Pvt-Ltd-Task1/assets/images/favicon.png">
+
+
 </head>
 
 <body>
@@ -129,6 +137,9 @@
         <div class="container-fluid main-container">
             <div class="row row-gap">
                 <div class="col-lg-3 col-md-3 sidebar-width">
+
+                   
+
                     <div class="left-sidebar">
 
                         <ul>
@@ -161,6 +172,17 @@
                             </a>
                         </ul>
 
+                        <select class="display-only-mobile" id="mobileDropdown">
+                            <option value="#sec-1">Description</option>
+                            <option value="#sec-2">Market Snapshot</option>
+                            <option value="#sec-3">Market Overview</option>
+                            <option value="#sec-4">Key Market Trends</option>
+                            <option value="#sec-5">Competitive Landscape</option>
+                            <option value="#sec-6">Major Players</option>
+                            <option value="#sec-7">Table Of Content</option>
+                            <option value="#sec-7">Methodology</option>
+                            <option value="#sec-8">FAQs</option>
+                        </select>
 
 
                         <div class="request-card">
@@ -786,41 +808,7 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-
-    <script>
-
-        let menuItems = document.querySelectorAll(".left-sidebar ul li");
-
-        menuItems.forEach(item => {
-            item.addEventListener("click", function () {
-                menuItems.forEach(li => li.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(window).on("scroll", function () {
-                var scrollPos = $(window).scrollTop();
-
-                $(".left-sidebar a").each(function () {
-                    var section = $($(this).attr("href"));
-                    if (section.length) {
-                        var sectionTop = section.offset().top - 250;
-                        var sectionBottom = sectionTop + section.outerHeight();
-
-                        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-                            $(".left-sidebar li").removeClass("active");
-                            $(this).find("li").addClass("active");
-                        }
-                    }
-                });
-            });
-        });
-
-    </script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
